@@ -32,6 +32,12 @@ CMS内容管理系统
 ![ 芳甸鲜花商店效果图3](docs/images/3.png)
 ![ 芳甸鲜花商店效果图4](docs/images/4.png)
 
+> 效果展示视频
+
+<video id="video" controls="" preload="none" poster="docs/images/1.png">
+      <source src="http://m.v.qq.com/play/play.html?vid=j3153s6ejox&url_from=share&second_share=0&share_from=copy&pgid=page_smallvideo_immersive&mod_id=sp_immersive_poster" type="video/mp4">
+      </video>
+
 ### 架构图
 ![ 芳甸鲜花商城架构图](docs/images/6.png)
 
