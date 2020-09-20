@@ -1,0 +1,21 @@
+.pay-logo {
+  width: 100%;
+  background: #ede5df;
+  display: flex;
+  justify-content: center;
+}
+
+.pay-price {
+  /* min-height: 10rem; */
+  color: orange;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3.5rem;
+}
+
+.pay-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  width: 100%;
+}

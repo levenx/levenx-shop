@@ -1,0 +1,18 @@
+export const HOME_INIT = "HOME_INIT";
+export const NEW_ORDER = "NEW_ORDER";
+export const ACCEPET_ORDER = "ACCEPET_ORDER";
+
+
+
+
+export const GOODS_LIST = "GOODS_LIST";
+export const GOODS_LIST_LOADING = "GOODS_LIST_LOADING";
+
+export const GOODS_ALL = "GOODS_ALL";
+
+export const CLASSIFY_LIST = "CLASSIFY_LIST";
+export const CLASSIFY_LIST_LOADING = "CLASSIFY_LIST_LOADING";
+
+
+export const ORDER_LIST = "ORDER_LIST";
+export const ORDER_LIST_LOADING = "ORDER_LIST_LOADING";

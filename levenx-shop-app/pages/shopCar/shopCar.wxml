@@ -1,0 +1,32 @@
+<scroll-view wx:if="{{shopCars.length}}" style="margin-bottom: 60px; height: calc(100vh - 100px);" scroll-y="{{true}}">
+  <van-swipe-cell right-width="{{ 65 }}" data-detail="{{item}}" async-close wx:key="_id" wx:for="{{shopCars}}" bind:close="shopcarDel">
+
+    <!-- 详情  -->
+    <view class="shop-card">
+      <van-checkbox value="{{ checks[item['_id']] }}" data-index="{{index}}" data-detail="{{item}}" bind:change="checkChange">
+      </van-checkbox>
+      <image src="{{item.graph}}"></image>
+      <view class="card-detail">
+        <view>{{item.name}}</view>
+        <price num="{{item.price}}" />
+      </view>
+
+      <van-stepper async-change bind:change="numChange" data-index="{{index}}" data-detail="{{item}}" custom-class="stepper" value="{{ item.num }}" min="1" max="100" />
+    </view>
+    <!-- 
+    <van-card num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.name}}" thumb="{{item.graph}}">
+    </van-card> -->
+    <view slot="right" click="shopcarDel" class="delete">删除</view>
+  </van-swipe-cell>
+</scroll-view>
+<van-submit-bar wx:if="{{shopCars.length}}" price="{{ totalPrice }}" button-text="{{totalNum ? '结算('+totalNum+')':'结算'}}" disabled="{{!totalPrice}}" bind:submit="ensureOrder">
+  <van-checkbox value="{{ allCheck }}" bind:change="checkAllChange">全选</van-checkbox>
+</van-submit-bar>
+
+<view class="loading" wx:if="{{loading}}">
+  <van-loading color="#1989fa" size="30px" type="spinner" vertical>加载中...</van-loading>
+</view>
+
+<view wx:if="{{!shopCars.length && !loading}}">
+  <empty description="购物车是空的" btnVisible="{{true}}"/>
+</view>

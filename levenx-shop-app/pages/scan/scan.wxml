@@ -1,0 +1,11 @@
+<view class="author-content">
+  <view>
+    Logo</view>
+
+  <view>是否授权登陆管理系统？</view>
+</view>
+
+<view class="author">
+  <van-button type="info" size="normal" bindtap="login">登陆</van-button>
+  <van-button plain size="normal" bindtap="cancel">取消</van-button>
+</view>

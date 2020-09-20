@@ -1,0 +1,15 @@
+<van-search value="{{ value }}" focus="{{ true }}" bind:change="searchEvent" placeholder="请输入搜索关键词" />
+
+<scroll-view scroll-y="{{true}}" style="height:calc(100vh - 60px);">
+  <view wx:if="{{searchs.length}}" class="search-total">共搜索到{{searchs.length}}条记录</view>
+  <view wx:if="{{searchs.length}}" wx:for="{{searchs}}" data-id="{{item._id}}" bindtap="gotoDetail">
+    <van-card centered="{{true}}" price="{{item.price}}" title="{{item.name}}" thumb="{{ item.graph }}">
+      <!-- <view slot="footer">
+        <van-button size="mini">按钮</van-button>
+        <van-button size="mini">按钮</van-button>
+      </view> -->
+    </van-card>
+  </view>
+
+  <empty wx:if="{{!searchs.length}}" description="未搜素到数据哦" />
+</scroll-view>

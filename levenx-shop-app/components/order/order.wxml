@@ -1,0 +1,23 @@
+<view wx:if="{{!!orders.length}}" wx:for="{{orders}}" wx:key="_id" class="order-item">
+  <view class="order-title">
+    <text style="color:gray;font-weight:700;">掌上花店</text>
+    <text wx:if="{{!item.pay}}" class="title-tips">等待付款</text>
+    <text wx:if="{{item.pay && !item.send}}" class="title-tips">等待收货</text>
+    <view class="done-tips" wx:if="{{item.pay && item.send}}">已完成</view>
+  </view>
+  <view class="order-detail">
+    <image style="width:5rem;height:5rem;" wx:for="{{item.detail}}" wx:for-item="order" src="{{order.graph}}"></image>
+  </view>
+  <view class="operate-btns">
+    <van-button wx:if="{{!item.pay}}" plain round custom-style="width:2rem;margin:0 5px;" type="primary" size="mini">取消订单</van-button>
+    <van-button wx:if="{{!item.pay}}" data-detail="{{item}}" bindtap="payEvent" plain round custom-style="width:2rem;margin:0 5px;" type="primary" size="mini">去支付</van-button>
+
+    <van-button wx:if="{{item.pay }}" data-detail="{{item}}" bindtap="buyAgain" plain round custom-style="width:2rem;margin:0 5px;" type="primary" size="mini">再次购买</van-button>
+    <van-button wx:if="{{item.pay && !item.send}}" data-detail="{{item}}" bindtap="ensureOrderEvent" plain round custom-style="width:2rem;margin:0 5px;" type="primary" size="mini">确认收货</van-button>
+
+    <van-button wx:if="{{item.pay && item.send && !item.comment}}" data-detail="{{item}}" bindtap="gotoComment" plain round custom-style="width:2rem;margin:0 5px;" type="primary" size="mini">评论</van-button>
+  </view>
+</view>
+<view wx:if="{{!orders.length && !loading}}">
+  <empty description="暂时没有订单信息" btnVisible="{{true}}"/>
+</view>

@@ -1,0 +1,8 @@
+page {
+  background: rgb(240, 240, 240);
+}
+
+.order-tabs {
+  margin-bottom: 1rem;
+}
+

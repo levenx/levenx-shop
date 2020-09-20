@@ -1,0 +1,60 @@
+.home-container {
+  height: 100%;
+}
+
+.banners {
+  height: 15rem;
+}
+
+.swiper-item {
+  height: 15rem;
+  background: rgb(240, 240, 240);
+}
+
+.goods-item {
+  height: 5rem;
+  background: #fff;
+  border: 1px solid;
+}
+
+/*  */
+
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.item_content {
+  margin: 10px 0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0 10px 1px gray;
+}
+
+.item-details {
+  padding: 1rem;
+}
+
+.item_content image {
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.shop-car {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

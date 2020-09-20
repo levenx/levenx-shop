@@ -1,0 +1,39 @@
+.picture {
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+  background: #a4805c;
+}
+
+.title {
+  font-size: 1.9rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+.location {
+  padding: 1rem;
+  border-bottom: 1px dotted #fff;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.support {
+  position: fixed;
+  bottom: 3rem;
+  text-align: center;
+  color: #fafafa;
+  left: 50%;
+  transform: translateX(-50%);
+}

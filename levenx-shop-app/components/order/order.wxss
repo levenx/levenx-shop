@@ -1,0 +1,42 @@
+.order-item {
+  min-height: 4rem;
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem;
+}
+
+.order-title {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.order-detail {
+  padding: 1rem 0;
+}
+
+.operate-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title-tips {
+  color: gray;
+}
+
+.done-tips {
+  color: rgb(215, 215, 215);
+  font-size: 0.5rem;
+  font-weight: 700;
+  border: 5px double rgb(215, 215, 215);
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(35deg);
+  position: absolute;
+  right: 0.5rem;
+  top: -1.3rem;
+}

@@ -1,0 +1,15 @@
+<view class="pay-logo">
+  <image style="width:20rem;height:20rem;" src="http://custom.static.levenx.com/fd-logo-pink.png"></image>
+</view>
+
+<van-panel title="支付金额">
+  <view class="pay-price">
+    ¥ {{totalPrice}}
+  </view>
+</van-panel>
+
+<view class="pay-btn">
+  <van-button round bind:click="payEvent" color="#ede5df">
+    支付
+  </van-button>
+</view>

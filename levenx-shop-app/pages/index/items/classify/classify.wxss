@@ -1,0 +1,76 @@
+.classify-container {
+  height: calc(100vh - 100px);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.classify-title {
+  height: calc(100vh - 100px);
+  background: rgb(240, 240, 240);
+}
+
+.classify-content {
+  height: calc(100vh - 100px);
+  background: #fff;
+  padding: 3px;
+}
+
+.title {
+  padding: 1rem;
+  text-align: center;
+  color: gray;
+}
+
+.title-active {
+  background: #fff;
+}
+
+.classify-content {
+  height: calc(100vh - 100px);
+  background: #fff;
+  padding: 3px;
+}
+
+.content {
+  width: 94;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.content image {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px gray;
+}
+
+.content-detail {
+  margin: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.van-card__price {
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--card-price-color, #ee0a24);
+  font-size: var(--card-price-font-size, 12px);
+  display: flex;
+  align-items: center;
+}
+
+.van-card__price-integer {
+  font-family: var(--card-price-font-family, Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif);
+  font-size: 1.1rem;
+}
+
+.van-card__price-decimal {
+  font-family: var(--card-price-font-family, Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif);
+}

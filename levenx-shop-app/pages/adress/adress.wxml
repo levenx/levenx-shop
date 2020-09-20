@@ -1,0 +1,13 @@
+<view class="adress-container" wx:for="{{ 5 }}">
+  <view>
+    <text class="adress-info">乐闻</text>
+    <text class="adress-info">13641483032</text>
+  </view>
+  <view class="adress">
+    广东省深圳市南山区腾讯大厦
+  </view>
+</view>
+
+<view class="bottom-btn">
+  <van-button bindtap="address" custom-style="width:70%;" size="small" icon="plus" type="danger" round> 新建收货地址</van-button>
+</view>

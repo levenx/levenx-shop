@@ -1,0 +1,5 @@
+.search-total {
+  text-align: center;
+  color: rgb(200, 200, 200);
+  margin: 1rem 0;
+}

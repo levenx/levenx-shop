@@ -1,0 +1,15 @@
+{
+  "envId": "levenx-shop-5g87ysxef8ce26a0",
+  "framework": {
+    "name": "koa-starter",
+    "plugins": {
+      "node": {
+        "use": "@cloudbase/framework-plugin-node",
+        "inputs": {
+          "name": "shop",
+          "path": "/shop"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "user-center": "./items/user/user",
+    "home": "./items/home/home",
+    "classify": "./items/classify/classify",
+    "location": "./items/location/location"
+  }
+}

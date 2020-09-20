@@ -1,0 +1,26 @@
+<view style="background:#a4805c;height: 100%;">
+  <view class="picture">
+    <image src="http://custom.static.levenx.com/fd-logo-2.png"></image>
+  </view>
+
+  <view class="slogan">
+    <view>春甸摇芳华</view>
+    <view>择花会伊人</view>
+  </view>
+
+  <view class="location">
+    <van-icon name="flower-o" size="25" color="#fff" />
+    <text bindtap="mapClick">广东省深圳市南山区腾讯大厦13层</text>
+    <van-icon name="phone-o" size="25" color="#fff" bindtap="callPhone" />
+  </view>
+
+  <view class="support">
+    <view>乐闻世界</view>
+    <view>提供技术服务</view>
+    <view>v1.0</view>
+  </view>
+
+  <!-- <map id="map" longitude="113.324520" latitude="23.099994" enable-zoom="{{false}}" enable-scroll="{{false}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange"
+    show-location style="width: 100%; height: 300px;">
+  </map> -->
+</view>

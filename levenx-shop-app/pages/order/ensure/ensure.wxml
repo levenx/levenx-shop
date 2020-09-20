@@ -1,0 +1,24 @@
+<scroll-view scroll-y="{{true}}" style="height:calc(100vh - 100px);">
+  <van-tabs type="card" line-height="100" swipeable="{{true}}" bind:change="sendChange">
+    <van-tab title="商家配送" title-style="height:100px;">
+      <view class="send-item" bindtap="addressSelelct">
+        <van-cell wx:if="{{address}}" border="{{false}}" center title="收货人: {{address.userName}}" value="{{address.telNumber}}" label="{{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}" is-link />
+        <van-cell wx:if="{{!address}}" border="{{false}}" center title="请选择收货地址" icon="location-o" is-link />
+      </view>
+    </van-tab>
+    <van-tab title="到店自取">
+      <view class="send-item">
+        <van-cell border="{{false}}" center title="自提点: 掌上花店" value="13641483032" label="广东省深圳市南山区腾讯大厦" is-link />
+      </view>
+    </van-tab>
+  </van-tabs>
+
+  <!-- 订单详情 -->
+  <van-card wx:for="{{orders}}" wx:key="_id" num="{{item.num}} " price="{{item.price}} " title="{{item.name}} " thumb="{{ item.graph }} " />
+</scroll-view>
+
+<van-submit-bar price="{{ total }}" loading="{{loading}}" button-text="提交订单" bind:submit="orderEnsure" tip="{{ true }}">
+  <view slot="tip">您的收货地址不支持同城送,
+    <text>修改地址</text>
+  </view>
+</van-submit-bar>

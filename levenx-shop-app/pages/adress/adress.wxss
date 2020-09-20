@@ -1,0 +1,23 @@
+.bottom-btn {
+  position: fixed;
+  bottom: 2rem;
+  width: 100vw;
+  left: 15%;
+}
+
+.adress-container {
+  min-height: 3rem;
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.adress-info {
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.adress {
+  margin: 0.5rem 0;
+  color: gray;
+  font-size: 0.8rem;
+}

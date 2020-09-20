@@ -1,0 +1,30 @@
+<van-search value="{{ value }}" disabled="{{true}}" bindtap="searchFocus" placeholder="请输入搜索关键词" />
+
+<view class="classify-container">
+  <scroll-view scroll-y="{{true}}" class="classify-title">
+    <van-skeleton title row="20" loading="{{ !classify.length }}">
+      <view data-index="{{index}}" data-detail="{{item}}" bindtap="classifyClick" class="title {{classifyIndex === index?'title-active':''}}" wx:for="{{classify}}" wx:key="_id">{{item.classify}}</view>
+    </van-skeleton>
+  </scroll-view>
+  <scroll-view scroll-y="{{true}}" class="classify-content">
+
+    <view style="padding: 1rem;text-align: center;" wx:if="{{loading}}">
+      <van-loading size="24px">加载中...</van-loading>
+    </view>
+
+    <view class="content" wx:if="{{!!currentDetails.length}}" wx:for="{{currentDetails}}" wx:key="_id" data-id="{{item._id}}" bindtap="detailClick">
+      <image src="{{item.graph}}"></image>
+      <view class="content-detail">
+        <view>{{item.name}}</view>
+        <price num="{{item.price}}" />
+      </view>
+    </view>
+    <view wx:if="{{!currentDetails.length && !loading}}">
+      <van-empty image="http://custom.static.levenx.com/flower.png">
+        <van-button round class="bottom-button" bindtap="watchOther">
+          看看其他分类
+        </van-button>
+      </van-empty>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,5 @@
+<van-empty class="custom-image" image="http://custom.static.levenx.com/flower.png" description="{{description}}">
+  <van-button round class="bottom-button" wx:if="{{btnVisible}}" bindtap="gotoHome">
+    逛逛首页
+  </van-button>
+</van-empty>

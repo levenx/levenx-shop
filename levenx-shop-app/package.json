@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.5.0",
+    "minapp-promise": "^0.1.0"
+  }
+}

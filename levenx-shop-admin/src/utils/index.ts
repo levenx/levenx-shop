@@ -1,0 +1,1 @@
+export { withMenus } from './withMenus';

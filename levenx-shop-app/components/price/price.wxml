@@ -1,0 +1,8 @@
+<view class="van-card__price">
+  <text class="van-card__price-integer">
+    ¥ {{priceInteger}}
+  </text>
+  <text class="van-card__price-decimal">
+    {{priceDecimal}}
+  </text>
+</view>

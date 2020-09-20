@@ -1,0 +1,21 @@
+<swiper indicator-dots="{{false}}" autoplay="{{false}}" current="{{currentPage}}" class="page-container" bindchange="pageChange">
+  <swiper-item>
+    <home wx:if="{{liveItems[0]}}" bindMenusClick="bindMenusClick" />
+  </swiper-item>
+  <swiper-item>
+    <classify wx:if="{{liveItems[1]}}" defaultIndex="{{defaultIndex}}" />
+  </swiper-item>
+  <swiper-item>
+    <location wx:if="{{liveItems[2]}}"/>
+  </swiper-item>
+  <swiper-item>
+    <user-center wx:if="{{liveItems[3]}}"/>
+  </swiper-item>
+</swiper>
+
+<van-tabbar active="{{ currentPage }}" bind:change="pageChange">
+  <van-tabbar-item icon="home-o">商城</van-tabbar-item>
+  <van-tabbar-item icon="apps-o">分类</van-tabbar-item>
+  <van-tabbar-item icon="location-o">门店</van-tabbar-item>
+  <van-tabbar-item icon="manager-o">我</van-tabbar-item>
+</van-tabbar>

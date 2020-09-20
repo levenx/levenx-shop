@@ -1,0 +1,12 @@
+/* pages/collect/collect.wxss */
+page {
+  background: rgb(240, 240, 240);
+}
+.collect-goods {
+  margin: 1rem 0;
+}
+.button{
+  width: 20%;
+  color: linear-gradient(to right, #4bb0ff, #6149f6);
+  border-radius: 5rem;
+}

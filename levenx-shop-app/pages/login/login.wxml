@@ -1,0 +1,6 @@
+<view>
+  <view class="login-logo">
+    <image style="width:20rem;height:20rem;" src="http://custom.static.levenx.com/fd-logo-pink.png"></image>
+  </view>
+  <van-button bind:getuserinfo="loginEvent" open-type="getUserInfo" round block custom-class="login-btn" type="info">获取昵称和头像</van-button>
+</view>

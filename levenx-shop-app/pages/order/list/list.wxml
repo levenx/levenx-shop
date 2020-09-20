@@ -1,0 +1,11 @@
+<van-tabs active="{{ active-1 }}" custom-class="order-tabs" border="{{true}}" sticky swipeable bind:change="typeChange">
+  <van-tab title="{{item}}" wx:for="{{tabs}}" wx:key="index">
+    <view wx:if="{{loading}}" style="text-align: center;margin-top:10px;">
+      <van-loading />
+    </view>
+    <order orders="{{currentOrders}}" loading="{{loading}}" />
+    <view wx:if="{{pageMap[index+1].loading}}" style="text-align: center;margin-top:10px;">
+      <van-loading />
+    </view>
+  </van-tab>
+</van-tabs>

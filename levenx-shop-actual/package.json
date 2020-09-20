@@ -1,0 +1,17 @@
+{
+  "name": "levenx-shop-actual",
+  "version": "1.0.0",
+  "description": "商城websocket服务",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app.js",
+    "start": "npm install && node app.js"
+  },
+  "author": "levenx",
+  "license": "ISC",
+  "dependencies": {
+    "qr-image": "^3.2.0",
+    "redis": "^3.0.2",
+    "ws": "^7.3.1"
+  }
+}

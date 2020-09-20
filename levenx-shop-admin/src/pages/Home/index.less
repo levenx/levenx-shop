@@ -1,0 +1,36 @@
+.home-item-container {
+    width                : 96%;
+    display              : grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap             : 20px 20px;
+}
+
+.home-item {
+    min-height   : 10rem;
+    box-shadow   : 0 0 10px 1px gray;
+    border-radius: 10px;
+    color        : #fff;
+    padding      : 1rem;
+}
+
+.home-item:nth-child(even) {
+    background: #1fc281;
+}
+
+.home-item:nth-child(odd) {
+    background: #4184f3;
+}
+
+.home-item-title {
+    font-size  : 1.5rem;
+    font-weight: 700;
+}
+
+.home-item-number {
+    font-size : 3rem;
+    text-align: center;
+}
+
+.home-container {
+    padding: 1rem;
+}

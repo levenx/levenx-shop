@@ -1,0 +1,13 @@
+.login-logo {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #ede5df;
+}
+
+.login-btn {
+  margin-top: 10rem;
+  width: 80vw;
+}

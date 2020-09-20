@@ -1,0 +1,22 @@
+<!-- pages/collect/collect.wxml -->
+<view wx:if="{{loading}}" style="text-align: center;margin-top:10px;">
+  <van-loading />
+</view>
+<view class="collect-goods" wx:for="{{currentCollections}}" wx:key="_id">
+  <van-card price="{{item.price}}" title="{{ item.name }}" thumb="{{ item.graph }}">
+    <view slot="footer">
+      <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" round type="info" custom-style="width:30%;height:2rem" data-id="{{item._id}}" bindtap="onClick">
+        查看详情
+      </van-button>
+    </view>
+  </van-card>
+</view>
+<view wx:if="{{page.loading}}" style="text-align: center;margin-top:10px;">
+  <van-loading />
+</view>
+
+
+
+<view wx:if="{{!currentCollections.length && !loading}}">
+  <empty description="暂时没有收藏信息"/>
+</view>

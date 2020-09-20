@@ -1,0 +1,32 @@
+page {
+  background: rgb(240, 240, 240);
+}
+
+.accont {
+  height: 5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(30, 163, 255), rgba(30, 163, 255, 0.6));
+}
+
+.account-name {
+  margin-left: 1rem;
+  color: #fff;
+}
+
+.funcs-container {
+  margin-top: 1.5rem;
+}
+
+.account-unlogin {
+  margin-left: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.scan {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}

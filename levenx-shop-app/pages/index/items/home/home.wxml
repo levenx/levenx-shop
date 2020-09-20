@@ -1,0 +1,59 @@
+<view class="home-container">
+  <scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="loadImages">
+    <van-search value="{{ value }}" disabled="{{true}}" bindtap="searchFocus" placeholder="请输入搜索关键词" />
+    <van-skeleton row="6" title loading="{{ !banners.length }}">
+      <swiper class="banners" indicator-dots="{{true}}" autoplay="{{true}}">
+        <swiper-item wx:for="{{banners}}" wx:key="_id" style="height:100%;" data-id="{{item._id}}" bindtap="bannerClick">
+          <view class="swiper-item">
+            <image style="width:100%;height:100%" src="{{item.picture || item.graph}}" />
+          </view>
+        </swiper-item>
+      </swiper>
+    </van-skeleton>
+
+    <!-- 菜单 -->
+    <van-grid column-num="3" border="{{false}}" use-slot="{{true}}">
+      <van-grid-item bindtap="menuClick" data-classify="{{item.classify}}" text="{{item.name}}" wx:key="index" wx:for="{{ goods }}">
+        <view slot="icon">
+          <image style="width:2.5rem;height:2.5rem;border-radius: 100%;" src="{{item.icon}}"></image>
+        </view>
+      </van-grid-item>
+    </van-grid>
+
+    <!-- 流布局 -->
+    <view class="masonry">
+      <view class="item">
+        <van-skeleton title row="4" loading="{{ !waterfalls.left.length }}">
+          <view class="item_content" data-id="{{item._id}}" bindtap="bannerClick" wx:for="{{waterfalls.left}}" wx:key="_id">
+            <image mode="widthFix" src="{{item.picture || item.graph}}"></image>
+            <view class="item-details">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </van-skeleton>
+      </view>
+      <view class="item">
+        <van-skeleton title row="4" loading="{{ !waterfalls.right.length }}">
+          <view class="item_content" data-id="{{item._id}}" bindtap="bannerClick" wx:key="_id" wx:for="{{waterfalls.right}}">
+            <image mode="widthFix" src="{{item.picture || item.graph}}"></image>
+            <view class="item-details">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </van-skeleton>
+      </view>
+    </view>
+    <view style="padding: 1rem;text-align: center;" wx:if="{{loading}}">
+      <van-loading size="24px">加载中...</van-loading>
+    </view>
+    <view style="padding: 1rem;text-align: center;font-size:14px;color:gray;" wx:if="{{done}}">
+      <text>—— 已加载全部 ——</text>
+    </view>
+    <view style="height:2rem;"></view>
+  </scroll-view>
+
+  <!-- 购物车 -->
+  <view class="shop-car" bindtap="gotoShopCar">
+    <van-icon size='1.8rem' color="gray" name="shopping-cart-o" />
+  </view>
+</view>

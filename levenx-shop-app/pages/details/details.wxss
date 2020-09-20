@@ -1,0 +1,90 @@
+.details-banners {
+  height: 20rem;
+}
+
+.banner-item {
+  height: 100%;
+  background: pink;
+}
+
+.goods-btn {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+}
+
+.shopcar-icon {
+}
+
+.shopcar-icon image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  animation: to_cart 1s forwards ease-in;
+}
+
+.content {
+  padding-left: 2rem;
+}
+
+@keyframes to_cart {
+  0% {
+    transform: scale(4);
+  }
+
+  40%, 55% {
+    top: 50%;
+    left: 40%;
+    transform: scale(1);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 92%;
+    left: -3%;
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+.operate {
+  margin: 0 5px;
+}
+
+.share-content {
+  min-height: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.share-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
